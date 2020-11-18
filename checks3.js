@@ -2,7 +2,7 @@
 var assert = require('assert');
 
 // Подключаем свою функцию
-var addTime = require('./index.js');
+var addTime = require('./index3.js');
 
 assert.equal(addTime(12, 30, 30), '13:00', 'При добавлении 30 мин. к 12:30 получится 13:00');
 assert.equal(addTime(23, 59, 31), '00:30', 'При добавлении 31 мин. к 23:59 получится 00:30');
