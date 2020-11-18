@@ -1,14 +1,18 @@
 /**
- * @param {Number} hours
- * @param {Number} minutes
- * @returns {Boolean}
+ * @param {Number} a Первое слагаемое
+ * @param {Number} b Второе слагаемое
+ * @returns {Number}
  */
-module.exports = function (hours, minutes) {
-  if(hours > 23 || hours < 0) {
-      return false;
-  }
-  if(minutes > 59 || minutes < 0) {
-      return false;
-  }
-  return true;
+module.exports = function (a, b) {
+	try {
+      var parsed_a = parseInt(a, 10);
+      var parsed_b = parseInt(b, 10);
+      if((isNaN(a)) || (isNaN(b))) {
+           throw new TypeError("NaN");
+      }
+      return parsed_a + parsed_b;
+    }
+    catch(e){
+      return NaN;
+    }
 };
