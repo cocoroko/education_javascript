@@ -2,7 +2,7 @@
 var assert = require('assert');
 
 // Подключаем свою функцию
-var isValidTime = require('./index.js');
+var isValidTime = require('./index2.js');
 
 assert.equal(isValidTime(12, 30), true, 'Время 12:30 валидное.');
 assert.equal(isValidTime(12, 61), false, 'Время 12:61 невалидное');
